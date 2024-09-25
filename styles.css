@@ -129,47 +129,122 @@ h3 {
     margin-bottom: 50px;
     height: 100px;
 }
+/* Cart Container */
+#cart {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center cart items horizontally */
+}
+
+/* Individual Cart Item Styling */
+.cart-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Item Image */
+.cart-item img.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* Cart Item Details */
+.cart-item .cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
 .cart-item p {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
-/* Price details section styling */
-.price-details {
-    margin-top: 20px;
-    padding: 10px;
-    border-top: 2px solid #ccc;
-}
-
-.price-details h4 {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.price-details h4 span {
-    font-weight: bold;
-}
-
-/* Styling for total amount */
-.total-amount {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 15px;
-    color: #d9534f; /* Red color for emphasis */
-}
-
-.place-order-btn {
-    display: block;
-    width: 100%;
+/* Quantity Buttons */
+.cart-item button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #007bff;
     background-color: #007bff;
     color: white;
-    padding: 10px;
-    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
+}
+
+.cart-item button:hover {
+    background-color: #0056b3;
+}
+
+/* Centered Price Details Section */
+.price-details {
+    width: 100%; /* Ensures it takes the full width of the container */
+    max-width: 400px; /* Limits the width for better presentation */
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers the content inside */
+}
+
+/* Styling for the headings and total amounts */
+.price-details h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.price-details h5 {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.price-details h5 span {
+    font-weight: bold;
+}
+
+/* Total Amount Styling */
+.price-details .total-amount {
     font-size: 18px;
+    color: #007bff;
+}
+
+.price-details .total-amount span {
+    color: #000;
+}
+
+/* Place Order Button */
+.place-order-btn {
     margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .place-order-btn:hover {

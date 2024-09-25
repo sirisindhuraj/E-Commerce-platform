@@ -84,14 +84,16 @@ function displayCart() {
     let shippingCharges = 15; // Flat shipping fee (can be dynamic)
 
     // Display cart items
-    cart.forEach(item => {
-        const cartItemDiv = document.createElement('div');
-        cartItemDiv.classList.add('cart-item');
+   cart.forEach(item => {
+    const cartItemDiv = document.createElement('div');
+    cartItemDiv.classList.add('cart-item');
 
-        const itemTotal = item.price * item.quantity;
-        totalMRP += itemTotal;
+    const itemTotal = item.price * item.quantity;
+    totalMRP += itemTotal;
 
-        cartItemDiv.innerHTML = `
+    cartItemDiv.innerHTML = `
+        <img src="${item.image}" alt="${item.title}" class="cart-item-image">
+        <div class="cart-item-details">
             <h4>${item.title}</h4>
             <p>Price: $${item.price}</p>
             <p>Quantity: 
@@ -100,14 +102,17 @@ function displayCart() {
                 <button onclick="increaseQuantity(${item.id})">+</button>
             </p>
             <p>Total: $${itemTotal.toFixed(2)}</p>
-        `;
+        </div>
+    `;
 
-        cartDiv.appendChild(cartItemDiv);
-    });
+    cartDiv.appendChild(cartItemDiv);
+});
+
 
     // Calculate final amounts
     const totalAmount = totalMRP - couponDiscount + platformFee + shippingCharges;
 
+    if(cart.length>0) {
     cartDiv.innerHTML += `
     <div class="price-details">
         <h4>Price Details</h4>
@@ -119,6 +124,7 @@ function displayCart() {
     </div>
     <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
 `;
+}
 
     // // Display place order button
     // const placeOrderButton = document.createElement('button');
@@ -138,5 +144,4 @@ function placeOrder() {
         alert('Your cart is empty!');
     }
 }
-
 
