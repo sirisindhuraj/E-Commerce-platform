@@ -1,0 +1,177 @@
+/* Style for the search box */
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+#header {
+    margin-right: 100px;
+    margin-bottom: 100px;
+    background-color: #007bff; /* Blue background */
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed; /* Keep the header fixed on top */
+    width: 88%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow under the header */
+}
+#search-input {
+    margin-top: 100px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Change border color on focus */
+#search-input:focus {
+    border-color: #007bff;
+}
+
+/* Add some margin to the top of the search box */
+body > div:first-child {
+    margin-bottom: 20px;
+    text-align: center; /* Center align the search box */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    margin-right: 100px;
+
+}
+
+ #cart {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;    /* Allows items to wrap onto the next line */
+    justify-content: space-between;  /* Distribute space evenly between items */
+}
+
+.product {
+    width: 30%;   
+    margin-top: 50px      /* Width for 3 items per row */
+    margin-bottom: 20px; /* Space at the bottom */
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center items horizontally */
+}
+
+.product-title {
+    margin: 0 0 50px 0;
+    height:100px; /* Margin to separate title from the image */
+}
+
+img {
+    width: 100px; /* Fixed width for images */
+    height: 120px; /* Maintain aspect ratio */
+}
+
+p {
+    margin: 0 0 10px 0; 
+    height:50px/* Margin to separate description from the price */
+}
+
+.product-price {
+    margin: 0 0 15px 0; /* Margin to separate price from the button */
+}
+
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+h3 {
+    margin-bottom: 50px;
+    height: 100px;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+/* Price details section styling */
+.price-details {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #ccc;
+}
+
+.price-details h4 {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.price-details h4 span {
+    font-weight: bold;
+}
+
+/* Styling for total amount */
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #d9534f; /* Red color for emphasis */
+}
+
+.place-order-btn {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.place-order-btn:hover {
+    background-color: #0056b3;
+}
